@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- <link rel="stylesheet" href="/bscss/bootstrap.min.css"> -->
+  <link href="/publico/css/form-album-digital.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bscss/bootstrap.min.css">
+  <script src="/bsjs/bootstrap.min.js"></script>
+  <script src="/popperjs/popper.min.js"></script>
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/publico/js/form-album-digital.js"></script>
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   -->
+  
+
+  <title>Negritude em Debate</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="container d-flex flex-column col-md-6">
+      <div class="container">
+        <h2>Formulário de Submissão Álbum Digital </h2>
+      </div>
+
+      
+      
+      <form id="dataForm" name="dataForm" class="row g-3" action="/album-digital" method="POST" onsubmit="return validarFormulario()">
+        
+            <div class="col-md-12">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="number" class="form-control" id="cpf" name="cpf" required>
+              </div>
+              <div class="col-md-6">
+                <label for="telWhats" class="form-label">Telefone / Whatsapp</label>
+                <input type="number" class="form-control" id="telWhats" name="telWhats" required>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="row">
+
+              <div class="col-md-9">
+                <label for="cidade" class="form-label">Cidade</label>
+                <select id="cidade" name="cidade" class="form-select">
+                  <option selected>Campo Grande</option>
+                  <option selected>Aquidauana</option>
+                  <option selected>Três Lagoas</option>
+                  <option selected>Jardim</option>
+                  <option selected>Nova Andradina</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="estado" class="form-label">Estado</label>
+                <select id="estado" name="estado" class="form-select" aria-label="readonly">
+                  <option selected>MS</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="dataNascimento" class="form-label">Data Nascimento</label>
+              <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+            </div>
+
+
+
+            <div class="row">
+              <div class="col-md-6" id="div-nome-responsavel">
+                <label for="nomeReponsavel" class="form-label">Nome do Responsável</label>
+                <input type="text" class="form-control" id="nomeResponsavel" name="nomeResponsavel" required>
+              </div>
+              <div class="col-md-6" id="div-cpf-responsavel">
+                <label for="cpfResponsavel" class="form-label">CPF Responsável</label>
+                <input type="number" class="form-control" id="cpfResponsavel" name="cpfResponsavel"required >
+              </div>
+            </div>
+
+            <!-- Botão próximo-->
+            
+
+          
+
+          <div class="tab-pane div-tab" id="autorizacao" role="tabpanel" aria-labelledby="autorizacao-tab">
+            <div class="col-md-12">
+              <div class="alert alert-dark" role="alert">
+                <h4 class="alert-heading">Objetivos!</h4>
+                <p>O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no
+                  Mato Grosso do Sul, historicamente apagados e fora dos padrões estéticos eurocêntricos.
+                  Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e
+                  professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de
+                  diminuir o arranjo da desigualdade existente no país.
+                </p>
+                <hr>
+                <p class="mb-0">Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se
+                  elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a
+                  intenção de contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura
+                  Afro-brasileira nas escolas.</p>
+              </div>
+
+            </div>
+
+            <div class="alert alert-dark" role="alert">
+              <h4 class="alert-heading">Regras</h4>
+              <p>Cada pessoa poderá participar com uma fotografia
+                A fotografia deve ser no formato digital JPG/JPEG
+                A fotografia poderá ser colorida ou preta e branco
+                A técnica para criação é livre mas precisa seguir o tema Beleza Negra Resiste
+                Cada pessoa só poderá ser premiada uma única vez
+                As fotografias serão selecionadas por um júri composto de pessoas pretas, que julgará a beleza negra a
+                partir dos elementos que permitirão evidenciar as conexões com as raízes negras, com a ancestralidade
+                negra, com a diáspora negra, com as pequenas Áfricas que existem em cada pessoa negra que vive em Mato
+                Grosso do Sul
+                Toda fotografia deve ser encaminhada com a autorização de uso de imagem.</p>
+              <hr>
+              <p class="mb-0"> A UFMS e o IFMS reservam para si, desde já, o direito incontestável de reproduzir as
+                fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando
+                os devidos créditos ao fotógrafo.</p>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="tituloFoto" class="form-label">Título da Foto</label>
+                <input type="text" class="form-control" id="tituloFoto" name="tituloFoto" required>
+              </div>
+              <div class="col-md-6">
+                <label for="nomeFotografa" class="form-label">Nome da/o Fotógrafa/o</label>
+                <input type="text" class="form-control" id="nomeFotografa" name="nomeFotografa" required>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="nomeFoto" class="form-label">Foto</label>
+              <input class="form-control" type="file" id="nomeFoto" name="nomeFoto" required>
+            </div>
+
+
+
+            <div class="row mt-3">
+              <!-- Botão para acionar modal -->
+              <div class="col-md-3">
+                <button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#Modal">
+                  Termo de autorização
+                </button>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+                aria-labelledby="TituloModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="TituloModal">Título do modal</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Autorizo a Universidade Federal do Mato Grosso do Sul e o Instituto Federal do Mato Grosso do Sul,
+                      bem como a/o fotógrafa/o a utilizarem a minha imagem para fins de participação na mostra
+                      fotográfica "Beleza Negra Resiste". Poderão utilizá-la na divulgação de materiais impressos,
+                      audiovisuais e eletrônicos, sem fins lucrativos e também poderá ser utilizada por tempo
+                      indeterminado. Fica assim autorizada, de livre e espontânea vontade, para os mesmos fins a cessão
+                      de direitos de veiculação, não recebendo para tanto qualquer tipo de remuneração.
+
+                      Por meio desta autorização, eu libero a UFMS e o IFMS, acima citados, seus representantes legais
+                      ou fornecedores, de futuros processos e queixas por violação de privacidade ou de direito de
+                      propriedade que eu poderia ter em relação a tal produção.
+
+                      Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com as regras e
+                      autorização dispostas nesta página.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Aceitar</button>
+                      <button type="button" class="btn btn-secondary">Recusar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <input class="form-check-input" type="checkbox" id="autorizacao">
+              </div>
+              <div class="col-md-8" >
+                    <label for="autorizacao" class="form-label">Li o termo e autorizo o uso de minha imagem</label>
+   
+                </div>
+                
+              
+              <div class="container d-flex justify-content-around mt-3">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+          
+
+          </div>
+      </form>
+    </div>
+  </main>
+  <form id="fileForm" action="/uploadFoto" method="post" encType="multipart/form-data" style="visibility: hidden;">
+    <input type='submit' />
+  </form>
+
+  
+
+ 
+
+</body>
+
+</html>
